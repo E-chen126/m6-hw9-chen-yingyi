@@ -43,7 +43,7 @@ header {
   text-align: center;
   display: flex;
   flex-direction: column;
-  background: rgba(24, 24, 27, 0.9);
+  background: rgba(24, 24, 27, 0.6);
   border-radius: 10px;
   border: 1px solid #eee;
   margin: 20px auto;
