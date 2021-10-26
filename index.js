@@ -43,6 +43,9 @@ function getWeatherData() {
 function showWeatherData(res){
     let {temp,feels_like}=res.main;
     let {description,icon}=res.weather[0];
+    let {name}=res;
+
+    loc.textContent = name;
     
     currentTempEl.innerHTML = 
     `<div class="weather-item">
@@ -56,14 +59,8 @@ function showWeatherData(res){
     climate.innerHTML =
     `<img src="icons/${icon}.png">
     <p>${description}</p> `
-
-
 }
 
-
-
-// const btn = document.querySelector('button');
-// const inputValue = document.querySelector('input');
 
 
 

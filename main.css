@@ -50,7 +50,7 @@ header {
   color: #eee;
 }
 
-.location {
+#location {
   padding-top: 20px;
 }
 
@@ -97,4 +97,11 @@ form {
 
 input {
   border: none;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #2d2527;
+  font-weight: 300;
+  opacity: 1; /* Firefox */
 }
