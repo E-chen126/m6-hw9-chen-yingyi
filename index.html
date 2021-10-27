@@ -13,29 +13,26 @@
     <header>
         <div class="current-info">
             <div id="time">
-                12:30 <span id="am-pm">PM</span>
+                <span id="am-pm"></span>
             </div>
             <div id="date">
-                Monday, 25 October
             </div>
         </div>
     </header>
 
     <main>
-        <section id="display">
-            <div><p id="location"></p></div>
-            <div id="climate">
-                <!-- <img id="climate-icon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
-                <p>Sunny</p> -->
-            </div>
+        <div id="display">
+            <div><p id="location">Curren Weather</p></div>
+            <div id="climate"></div>
             <div id="currentTemp"></div>
-        </section>
+        </div>
 
-        <form>
-            <input id="search-input" type="text" placeholder="Enter location" name="search">
-            <button id="search-button" type="submit">Search</button>
-        </form> 
+        <div id='search'>
+            <input id="search-input" type="text" placeholder="Enter location">
+            <button>Search</button>
+        </div> 
     </main>
     <script src="index.js"></script>
+
 </body>
 </html>

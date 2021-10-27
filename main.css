@@ -8,7 +8,6 @@ body {
   text-align: center;
   font-size: 1.5em;
   height: 100vh;
-
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -17,11 +16,11 @@ body {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  background-color: #464646;
+  background-color: #678ee75e;
 }
 
 header {
-  color: #342b2b;
+  color: #121111;
   margin: 40px auto;
   max-width: 90%;
 }
@@ -58,16 +57,21 @@ div#currentTemp {
   margin: 30px auto;
 }
 
+#climate p {
+  text-transform: capitalize;
+}
+
 .weather-item {
   padding: 3px 0;
 }
 
-form {
-  margin-top: 50px;
+#search {
+  margin: 50px 0;
 }
 
-#search-button {
-  color: #494949;
+button {
+  color: #fca592;
+  background: rgba(24, 24, 27, 0.6);
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 5px;
@@ -77,10 +81,10 @@ form {
   transition: all 0.4 ease 0s;
 }
 
-#search-button:hover {
-  color: #fff;
-  background: #ff6768;
-  border-color: #ff6768;
+button:hover {
+  color: #121111;
+  background: #fca592;
+  border-color: #494949;
   transition: all 0.4s ease 0s;
 }
 
@@ -89,7 +93,7 @@ form {
   overflow: hidden;
   font-size: 20px;
   margin: 8px 0;
-  border-bottom: 3px solid #ff6768;
+  border-bottom: 3px solid #fca592;
   color: #2d2527;
   outline: none;
   background: none;
@@ -101,7 +105,7 @@ input {
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #2d2527;
+  color: #000;
   font-weight: 300;
   opacity: 1; /* Firefox */
 }
