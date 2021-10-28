@@ -31,9 +31,13 @@ const input = document.getElementById('search-input');
 
 let weather = {
     fetchWeather : function(city){
+        if(!input.value.trim()) return
         fetch("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=ebb02a9fb5d812209ec10210d659765c")
         .then((response)=> response.json())
-        .then((data)=>this.displayWeather(data));
+        .then((data)=>{
+            this.displayWeather(data);
+            input.value="";
+        });
         
     },
     displayWeather: function(data){
@@ -41,6 +45,9 @@ let weather = {
         const {icon,description} = data.weather[0];
         const {temp,feels_like}=data.main;
         console.log(name,icon,description,temp,feels_like);
+        // if (data.message){
+        //     loc.textContent = data.message;
+        // }
         loc.textContent = name;
         currentTempEl.innerHTML = 
         `<div class="weather-item">
@@ -55,6 +62,8 @@ let weather = {
         `
     },
 };
+
+
 
 const btn = document.querySelector('button')
 btn.onclick = function() {
@@ -79,7 +88,7 @@ function getWeatherData() {
         fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=9cc9469727b5c56020c99745d38c6fec`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            //console.log(data);
             showWeatherData(data);
         })
 })
