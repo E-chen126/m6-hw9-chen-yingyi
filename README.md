@@ -1,5 +1,4 @@
 # m6-hw9-chen-yingyi
 
-<img id="climate-icon" src='http://openweathermap.org/img/wn/
-" + icon + "
-@2x.png' alt="">
+Issue:
+I don't know why line 48 - 50 doesn't work.

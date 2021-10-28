@@ -35,19 +35,21 @@ let weather = {
         fetch("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=ebb02a9fb5d812209ec10210d659765c")
         .then((response)=> response.json())
         .then((data)=>{
-            this.displayWeather(data);
+            displayWeather(data);
             input.value="";
         });
         
-    },
-    displayWeather: function(data){
+    }
+}
+    const displayWeather = function(data){
         const {name} = data;
         const {icon,description} = data.weather[0];
         const {temp,feels_like}=data.main;
         console.log(name,icon,description,temp,feels_like);
-        // if (data.message){
-        //     loc.textContent = data.message;
-        // }
+        // if (data.cod === "404"){
+        //    loc.textContent = data.message ;
+        //      return
+        //  }
         loc.textContent = name;
         currentTempEl.innerHTML = 
         `<div class="weather-item">
@@ -60,8 +62,7 @@ let weather = {
         `<img src="icons/${icon}.png">
         <p>${description}</p>
         `
-    },
-};
+    };
 
 
 
@@ -79,7 +80,7 @@ input.addEventListener('keyup',function(event){
 
 
 
-// Current Location by longitude and latitude
+// get weather in current Location by longitude and latitude
 getWeatherData()
 function getWeatherData() {
     navigator.geolocation.getCurrentPosition(success => {
