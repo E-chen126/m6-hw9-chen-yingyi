@@ -32,7 +32,7 @@ const input = document.getElementById('search-input');
 let weather = {
     fetchWeather : function(city){
         if(!input.value.trim()) return
-        fetch("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=ebb02a9fb5d812209ec10210d659765c")
+        fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=ebb02a9fb5d812209ec10210d659765c")
         .then((response)=> response.json())
         .then((data)=>{
             displayWeather(data);
@@ -86,7 +86,7 @@ function getWeatherData() {
     navigator.geolocation.getCurrentPosition(success => {
         let lon = success.coords.longitude;
         let lat = success.coords.latitude;
-        fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=9cc9469727b5c56020c99745d38c6fec`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=9cc9469727b5c56020c99745d38c6fec`)
         .then(res => res.json())
         .then(data => {
             //console.log(data);
